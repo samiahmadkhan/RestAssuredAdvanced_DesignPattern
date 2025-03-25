@@ -11,6 +11,7 @@ public class TC1_PlaylistTest {
     @Test
     public void Story001_Verify_get_User_Playlist(){
         Response response=PlaylistApi.getUserPlaylist();
+        response.then().log().all();
         PlaylistApi.verifyResponseStatusCode(response,200);
     }
 }

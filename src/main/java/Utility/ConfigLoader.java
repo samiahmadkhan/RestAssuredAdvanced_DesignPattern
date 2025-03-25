@@ -19,6 +19,10 @@ public class ConfigLoader {
     private static final String BASE_ACCOUNT_URI_API = "base_uri_accounts";
 
     private static final String USER_ID = "user_id";
+    private static final String CLIENT_ID = "client_id";
+    private static final String CLIENT_SECRET = "client_secret";
+    private static final String GRANT_TYPE = "grant_type";
+    private static final String REFRESH_TOKEN = "refresh_token";
     private static final String RESOURCES_PATH = System.getProperty("user.dir") + "/src/test/resources/";
 
 
@@ -61,6 +65,22 @@ public class ConfigLoader {
     public String getUserID() {
         return getPropertyValue(USER_ID);
     }
+    public String getClientID() {
+        return getPropertyValue(CLIENT_ID);
+    }
+
+    public String getClientSecret() {
+        return getPropertyValue(CLIENT_SECRET);
+    }
+
+    public String getGrantType() {
+        return getPropertyValue(GRANT_TYPE);
+    }
+
+    public String getRefreshToken() {
+        return getPropertyValue(REFRESH_TOKEN);
+    }
+
     private String getPropertyValue(String propertyName){
         return properties.getProperty(propertyName);
 

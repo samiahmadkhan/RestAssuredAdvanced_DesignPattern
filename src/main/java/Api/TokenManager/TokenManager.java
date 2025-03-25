@@ -1,6 +1,7 @@
 package Api.TokenManager;
 
 import Api.RestResource.RestResource;
+import Utility.ConfigLoader;
 import io.restassured.response.Response;
 
 import java.time.Instant;
@@ -24,6 +25,11 @@ public class TokenManager {
 
     private static Response generateToken() {
         HashMap<String, String> formParameters = new HashMap<>();
+        formParameters.put("grant_type", ConfigLoader.initialization().getGrantType());
+        formParameters.put("client_id",ConfigLoader.initialization().getClientID());
+        formParameters.put("client_secret",ConfigLoader.initialization().getClientSecret());
+        formParameters.put("refresh_token",ConfigLoader.initialization().getRefreshToken());
+
         return RestResource.postWithFormParameter(formParameters);
 
     }

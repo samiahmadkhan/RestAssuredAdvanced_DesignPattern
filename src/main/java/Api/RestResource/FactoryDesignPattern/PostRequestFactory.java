@@ -1,5 +1,7 @@
 package Api.RestResource.FactoryDesignPattern;
 
+
+//This is Concrete Abstract Factory
 public class PostRequestFactory <T> implements PayloadRequestFactory<T> {
     @Override
     public RestRequestWithPayload<T> createRequest() {
