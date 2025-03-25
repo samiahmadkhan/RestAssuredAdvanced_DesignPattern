@@ -24,8 +24,7 @@ public class TokenManager {
 
     private static Response generateToken() {
         HashMap<String, String> formParameters = new HashMap<>();
-        return RestResource.postAccount(formParameters);
-
+        return RestResource.postWithFormParameter(formParameters);
 
     }
 }
