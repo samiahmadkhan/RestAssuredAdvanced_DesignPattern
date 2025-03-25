@@ -1,12 +1,9 @@
-package Api.RestResource.FactoryDesignPattern;
+package Api.RestResource.FactoryDesignPattern.ConcreteProduct;
 
+import Api.RestResource.FactoryDesignPattern.Product.RestRequestNoPayload;
 import Api.SpectBuilder.SpecBuilder;
 import io.restassured.RestAssured;
-import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.response.Response;
-
-import java.io.PrintStream;
-import java.io.StringWriter;
 
 
 //This is Concrete Abstract Product

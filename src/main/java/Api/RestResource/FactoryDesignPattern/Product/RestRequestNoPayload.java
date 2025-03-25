@@ -1,4 +1,4 @@
-package Api.RestResource.FactoryDesignPattern;
+package Api.RestResource.FactoryDesignPattern.Product;
 
 import io.restassured.response.Response;
 
