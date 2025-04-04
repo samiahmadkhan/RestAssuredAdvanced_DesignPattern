@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test Spotify API Test Cases">
+    <test name="MyTest">
+        <classes>
+            <class name="com.spotify.TC1_PlaylistTest"/>
+            <class name="com.spotify.TC2_createAndVerifyPlaylist"/>
+            <!-- Add more classes if needed -->
+        </classes>
+    </test>
+</suite>

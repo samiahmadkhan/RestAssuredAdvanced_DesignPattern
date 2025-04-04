@@ -66,24 +66,28 @@ public class ConfigLoader {
         return getPropertyValue(USER_ID);
     }
     public String getClientID() {
-        return getPropertyValue(CLIENT_ID);
+       // return getPropertyValue(CLIENT_ID);
+        return EnvironmentPropertyUtility.getEnvironmentProperty(CLIENT_ID);
     }
 
     public String getClientSecret() {
-        return getPropertyValue(CLIENT_SECRET);
+        //return getPropertyValue(CLIENT_SECRET);
+        return EnvironmentPropertyUtility.getEnvironmentProperty(CLIENT_SECRET);
     }
 
     public String getGrantType() {
-        return getPropertyValue(GRANT_TYPE);
+        //return getPropertyValue(GRANT_TYPE);
+        return EnvironmentPropertyUtility.getEnvironmentProperty(GRANT_TYPE);
+
     }
 
     public String getRefreshToken() {
-        return getPropertyValue(REFRESH_TOKEN);
+       // return getPropertyValue(REFRESH_TOKEN);
+        return EnvironmentPropertyUtility.getEnvironmentProperty(REFRESH_TOKEN);
+
     }
 
     private String getPropertyValue(String propertyName){
         return properties.getProperty(propertyName);
-
-
     }
 }

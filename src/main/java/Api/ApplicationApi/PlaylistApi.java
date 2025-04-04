@@ -14,6 +14,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.restassured.path.json.JsonPath;
+import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
@@ -31,6 +32,8 @@ public class PlaylistApi {
         //using factory design pattern
         NoPayloadRequestFactory requestFactory=new GetRequestFactory();
         RestRequestNoPayload getRequest =requestFactory.createRequest();
+
+
         return getRequest.execute(USER +"/"+ USER_ID + PLAYLISTS, TokenManager.getToken());
     }
     public static Response createUserPlaylist(CreateUserPlaylistPayload payload){
