@@ -5,7 +5,9 @@ import Api.Pojo.CreateUserPlaylistPayload;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-public class TC2_createAndVerifyPlaylist {
+//@Listeners(ChainTestListener.class)
+public class TC2_createAndVerifyPlaylistTest {
+
 
     @Test
     public void Story002_Create_Verify_Playlist(){
