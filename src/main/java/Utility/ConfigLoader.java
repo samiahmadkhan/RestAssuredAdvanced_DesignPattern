@@ -38,6 +38,7 @@ public class ConfigLoader {
     private ConfigLoader() {
         //set the Env
         //if Env is not set then setting default STAGE Env
+        //eg mvn test -DENV=SIT
         ENV=System.getProperty(ENV,"STAGE");
 
         //here instead of Swuitch i am using HashMap and using optional
@@ -67,23 +68,24 @@ public class ConfigLoader {
     }
     public String getClientID() {
        // return getPropertyValue(CLIENT_ID);
-        return EnvironmentPropertyUtility.getEnvironmentProperty(CLIENT_ID);
+        return EnvironmentPropertyUtility.getInstance().getEnvironmentProperty(CLIENT_ID);
     }
 
     public String getClientSecret() {
         //return getPropertyValue(CLIENT_SECRET);
-        return EnvironmentPropertyUtility.getEnvironmentProperty(CLIENT_SECRET);
+        return EnvironmentPropertyUtility.getInstance().getEnvironmentProperty(CLIENT_SECRET);
     }
 
     public String getGrantType() {
         //return getPropertyValue(GRANT_TYPE);
-        return EnvironmentPropertyUtility.getEnvironmentProperty(GRANT_TYPE);
+        System.out.println(EnvironmentPropertyUtility.getInstance().getEnvironmentProperty(GRANT_TYPE));
+        return EnvironmentPropertyUtility.getInstance().getEnvironmentProperty(GRANT_TYPE);
 
     }
 
     public String getRefreshToken() {
        // return getPropertyValue(REFRESH_TOKEN);
-        return EnvironmentPropertyUtility.getEnvironmentProperty(REFRESH_TOKEN);
+        return EnvironmentPropertyUtility.getInstance().getEnvironmentProperty(REFRESH_TOKEN);
 
     }
 
