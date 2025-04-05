@@ -1,0 +1,43 @@
+{
+    "collaborative": false,
+    "description": "Aut alias et provident et officiis magnam.",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0mLkprKVvafC2lmxPFL2l3"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/0mLkprKVvafC2lmxPFL2l3",
+    "id": "0mLkprKVvafC2lmxPFL2l3",
+    "images": [
+        
+    ],
+    "primary_color": null,
+    "name": "Cassandra",
+    "type": "playlist",
+    "uri": "spotify:playlist:0mLkprKVvafC2lmxPFL2l3",
+    "owner": {
+        "href": "https://api.spotify.com/v1/users/samikhan78666",
+        "id": "samikhan78666",
+        "type": "user",
+        "uri": "spotify:user:samikhan78666",
+        "display_name": null,
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/samikhan78666"
+        }
+    },
+    "public": false,
+    "snapshot_id": "AAAAG2j6iO4gDRyepY2CTCn/ksIhKeDw",
+    "tracks": {
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "href": "https://api.spotify.com/v1/playlists/0mLkprKVvafC2lmxPFL2l3/tracks",
+        "total": 0,
+        "items": [
+            
+        ]
+    }
+}

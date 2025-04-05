@@ -2,6 +2,9 @@
 <suite name="Test Spotify API Test Cases">
     <listeners>
         <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener" />
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+        <listener class-name="Listners.TestListners" />
+
     </listeners>
     <test name="MyTest">
         <classes>
