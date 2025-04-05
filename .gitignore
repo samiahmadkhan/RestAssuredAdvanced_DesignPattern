@@ -39,3 +39,4 @@ build/
 
 ### Project Related Environment Properties ###
 .env
+.env.STAGE
