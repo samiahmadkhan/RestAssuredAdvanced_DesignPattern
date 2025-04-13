@@ -25,7 +25,8 @@ public class PostRequest<T> implements RestRequestWithPayload<T> {
                 .auth().oauth2(accessToken)
                 .log().all()
                 .filter(new RequestLoggingFilter(captor))
-                .when().post(path);
+                .when().
+                post(path);
         printDetailsInExtentReport(writerRequest, response);
         return response;
     }
