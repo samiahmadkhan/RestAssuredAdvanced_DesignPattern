@@ -27,6 +27,7 @@ public class PostRequest<T> implements RestRequestWithPayload<T> {
                 .filter(new RequestLoggingFilter(captor))
                 .when().post(path);
         printDetailsInExtentReport(writerRequest, response);
+
         return response;
     }
     private static void printDetailsInExtentReport(StringWriter writer, Response response) {
