@@ -19,9 +19,12 @@ import io.qameta.allure.Step;
 import io.restassured.path.json.JsonPath;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
+import org.apache.commons.io.output.WriterOutputStream;
 import org.testng.Assert;
 
 import java.io.File;
+import java.io.PrintStream;
+import java.io.StringWriter;
 
 public class PlaylistApi {
     public static final String PLAYLISTS = "/playlists";
@@ -45,12 +48,11 @@ public class PlaylistApi {
 
     public static Response createUserPlaylist(CreateUserPlaylistPayload payload) {
         Allure.step("Create User Playlist");
+
         String USER_ID = ConfigLoader.initialization().getUserID().replace("\"", "");
         PayloadRequestFactory payloadRequestFactory = new PostRequestFactory();
         RestRequestWithPayload restRequestWithPayload = payloadRequestFactory.createRequest();
         Response response = restRequestWithPayload.execute(USER + "/" + USER_ID + PLAYLISTS, payload, TokenManager.getToken());;
-
-        Allure.step("Response Body:\n" + attachResponseInReport(response));
         return response;
 
 
@@ -89,18 +91,4 @@ public class PlaylistApi {
 
     }
 
-    public static String attachResponseInReport(Response response) {
-        ObjectMapper mapper = new ObjectMapper();
-        Object json = null;
-        String prettyJson;
-        ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
-        try {
-            json = mapper.readValue(response.asString(), Object.class);
-            prettyJson = writer.writeValueAsString(json);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-        return prettyJson;
-
-    }
 }
